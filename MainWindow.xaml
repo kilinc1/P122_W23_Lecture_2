@@ -5,9 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P122_W23_Lecture_2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="btnLecture_Result" Content="Lecture Result" HorizontalAlignment="Left" Margin="679,396,0,0" VerticalAlignment="Top" Height="21" Width="99" Click="btnLecture_Result_Click"/>
+        Title="Lecture 3" Height="450" Width="800" Background="#FF78C3B9" ResizeMode="NoResize" Cursor="Hand">
+
+    <Grid Background="#FF78984B">
+        <Label Content="First Name" Margin="52,24,0,0" VerticalAlignment="Top" Width="124" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Last Name" Margin="52,79,0,0" VerticalAlignment="Top" Width="124" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+        <Label Content="Program" Margin="52,135,0,0" VerticalAlignment="Top" Width="124" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+
+        <!--Single Line Input-->
+        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="56,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="56,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Button x:Name="btnDisplayInfo" Content="Display Information" HorizontalAlignment="Left" Margin="52,194,0,0" VerticalAlignment="Top" Height="37" Width="157" Click="btnDisplayInfo_Click"/>
+        <Label x:Name="lblAddSubtract" Content="+ || -" Margin="0,106,0,0" VerticalAlignment="Top" Width="52" HorizontalAlignment="Center" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="txtValue1" HorizontalAlignment="Left" Margin="330,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39"/>
+        <TextBox x:Name="txtValue2" HorizontalAlignment="Left" Margin="426,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39"/>
+        <Label Content="=" Margin="470,106,0,0" VerticalAlignment="Top" Width="52" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="txtValueResult" HorizontalAlignment="Left" Margin="496,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="335,149,0,0" VerticalAlignment="Top" Height="32" Width="91" Click="btnAdd_Click"/>
+        <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="444,149,0,0" VerticalAlignment="Top" Height="32" Width="91" Click="btnSubtract_Click"/>
+
 
     </Grid>
+
+    <!--Grid is a child of Window-->
+    <!--<Grid>
+
+
+    </Grid>-->
 </Window>
+<!--Closing WIndow Tag-->
+    
