@@ -23,26 +23,7 @@ namespace P122_W23_Lecture_2
    
 
 
-        } // MainWindow()
-
-        // Click Event
-        private void btnDisplayInfo_Click(object sender, RoutedEventArgs e)
-        {
-            // Event based
-            // Change the text of our text box when our app runs
-
-            //txtFirstName.Text = "Hi Everyone"; // Set the text
-
-            // Get the text
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-
-            // Message Box
-            MessageBox.Show(firstName + " " + lastName);
-
-        } // btnDisplayInfo_Click
-
-
+        } // Ma
         // Add Button Event
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
@@ -106,6 +87,53 @@ namespace P122_W23_Lecture_2
 
         }
 
-   
+        private void txtValueResult_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnmultiply_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string vl1 = txtdata1.Text;
+            string vl2 = txtdata2.Text;
+
+            int v1=int.Parse(vl1);
+            int v2 = int.Parse(vl2);
+            int val3= v1 * v2;
+            
+            txtdata3.Text= val3.ToString();
+            lbmultidivide.Content = "*";
+        }
+
+        private void btndivide_Click(object sender, RoutedEventArgs e)
+        {
+            string vl1 = txtdata1.Text;
+            string vl2 = txtdata2.Text;
+
+            int v1 = int.Parse(vl1);
+            int v2 = int.Parse(vl2);
+            float val3 = v1 / v2;
+
+            txtdata3.Text = val3.ToString();
+            lbmultidivide.Content = "/";
+        }
+
+        private void btnave_Click(object sender, RoutedEventArgs e)
+        {
+
+            string b1 = txtdata3.Text;
+            string b2 = txtValueResult.Text;
+            int a1=int.Parse(b1);
+            int a2=int.Parse(b2);
+            int totalval = a1+a2;
+            float avetotal = totalval / 2;
+            txtaor.Text = avetotal.ToString();
+        }
     }
 }

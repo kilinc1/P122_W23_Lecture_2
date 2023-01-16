@@ -5,25 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P122_W23_Lecture_2"
         mc:Ignorable="d"
-        Title="Lecture 3" Height="450" Width="800" Background="#FF78C3B9" ResizeMode="NoResize" Cursor="Hand">
+        Title="Lecture 2 by Elif Kilinc 1/15/2023" Height="382" Width="466" Background="#FF78C3B9" ResizeMode="NoResize" Cursor="Hand">
 
-    <Grid Background="#FF78984B">
-        <Label Content="First Name" Margin="52,24,0,0" VerticalAlignment="Top" Width="124" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
-        <Label Content="Last Name" Margin="52,79,0,0" VerticalAlignment="Top" Width="124" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
-        <Label Content="Program" Margin="52,135,0,0" VerticalAlignment="Top" Width="124" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
+    <Grid Margin="1,-3,0,1" RenderTransformOrigin="0.5,0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="421*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="101*"/>
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.415"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0E1BE8"/>
+                <GradientStop Color="#FF359BCC" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
 
         <!--Single Line Input-->
-        <TextBox x:Name="txtFirstName" HorizontalAlignment="Left" Margin="56,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtLastName" HorizontalAlignment="Left" Margin="56,108,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-
-        <Button x:Name="btnDisplayInfo" Content="Display Information" HorizontalAlignment="Left" Margin="52,194,0,0" VerticalAlignment="Top" Height="37" Width="157" Click="btnDisplayInfo_Click"/>
-        <Label x:Name="lblAddSubtract" Content="+ || -" Margin="0,106,0,0" VerticalAlignment="Top" Width="52" HorizontalAlignment="Center" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox x:Name="txtValue1" HorizontalAlignment="Left" Margin="330,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39"/>
-        <TextBox x:Name="txtValue2" HorizontalAlignment="Left" Margin="426,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39"/>
-        <Label Content="=" Margin="470,106,0,0" VerticalAlignment="Top" Width="52" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox x:Name="txtValueResult" HorizontalAlignment="Left" Margin="496,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="335,149,0,0" VerticalAlignment="Top" Height="32" Width="91" Click="btnAdd_Click"/>
-        <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="444,149,0,0" VerticalAlignment="Top" Height="32" Width="91" Click="btnSubtract_Click"/>
+        <Label x:Name="lblAddSubtract" Content="+ || -" Margin="94,58,0,0" VerticalAlignment="Top" Width="52" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold" Grid.Column="1"/>
+        <TextBox x:Name="txtValue1" HorizontalAlignment="Left" Margin="50,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <TextBox x:Name="txtValue2" HorizontalAlignment="Left" Margin="146,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" Grid.Column="1"/>
+        <Label Content="=" Margin="190,58,0,0" VerticalAlignment="Top" Width="52" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold" Grid.Column="1"/>
+        <TextBox x:Name="txtValueResult" HorizontalAlignment="Left" Margin="216,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" TextChanged="txtValueResult_TextChanged" Grid.Column="1"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="54,101,0,0" VerticalAlignment="Top" Height="32" Width="92" Click="btnAdd_Click" Grid.Column="1"/>
+        <Button x:Name="btnSubtract" Content="Subtract" HorizontalAlignment="Left" Margin="164,101,0,0" VerticalAlignment="Top" Height="32" Width="90" Click="btnSubtract_Click" Grid.Column="1"/>
+        <TextBox x:Name="txtdata1" HorizontalAlignment="Left" Height="19" Margin="48,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39" TextChanged="TextBox_TextChanged" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="txtdata2" HorizontalAlignment="Left" Height="19" Margin="145,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39" TextChanged="TextBox_TextChanged" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="txtdata3" HorizontalAlignment="Left" Height="20" Margin="216,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="39" TextChanged="TextBox_TextChanged" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="btnmultiply" Content="Multiply" HorizontalAlignment="Left" Height="32" Margin="55,66,0,0" VerticalAlignment="Top" Width="91" Click="btnmultiply_Click" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="btndivide" Content="Divide" HorizontalAlignment="Left" Height="32" Margin="164,66,0,0" VerticalAlignment="Top" Width="91" Click="btndivide_Click" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="lbmultidivide" Content="* || /" VerticalAlignment="Top" Width="53" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold" Margin="92,22,0,0" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="=" Margin="189,22,0,0" VerticalAlignment="Top" Width="53" HorizontalAlignment="Left" Foreground="White" FontSize="16" FontFamily="Arial Rounded MT Bold" Grid.Row="1" Grid.Column="1"/>
+        <TextBox x:Name="txtaor" HorizontalAlignment="Left" Height="45" Margin="53,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="btnave" Content="Average of Results" HorizontalAlignment="Left" Height="35" Margin="270,149,0,0" VerticalAlignment="Top" Width="107" Click="btnave_Click" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="Add or Subtract" HorizontalAlignment="Left" Height="41" Margin="41,22,0,0" VerticalAlignment="Top" Width="213" Foreground="White" FontSize="22" Grid.Column="1"/>
+        <Label Content="Multiply or Divide" HorizontalAlignment="Left" Height="40" Margin="41,138,0,0" VerticalAlignment="Top" Width="219" FontSize="22" Foreground="White" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label Content="Average or Results" HorizontalAlignment="Left" Height="41" Margin="53,98,0,0" VerticalAlignment="Top" Width="209" Foreground="White" FontSize="22" Grid.Row="1" Grid.Column="1"/>
+        <Label Grid.Column="1" Content="by Elif Kilinc" HorizontalAlignment="Left" Margin="335,17,0,0" VerticalAlignment="Top"/>
 
 
     </Grid>
